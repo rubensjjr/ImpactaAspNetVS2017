@@ -50,7 +50,6 @@
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "&Cliente";
-
             // 
             // label2
             // 
@@ -60,7 +59,6 @@
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "&Valor";
-
             // 
             // label3
             // 
@@ -70,7 +68,6 @@
             this.label3.Size = new System.Drawing.Size(21, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "&UF";
-        
             // 
             // label4
             // 
@@ -80,7 +77,6 @@
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "Frete";
-
             // 
             // label5
             // 
@@ -90,7 +86,6 @@
             this.label5.Size = new System.Drawing.Size(31, 13);
             this.label5.TabIndex = 8;
             this.label5.Text = "Total";
-
             // 
             // nameTextBox
             // 
@@ -105,6 +100,7 @@
             this.valorTextBox.Name = "valorTextBox";
             this.valorTextBox.Size = new System.Drawing.Size(121, 20);
             this.valorTextBox.TabIndex = 3;
+
             // 
             // freteTextBox
             // 
@@ -113,6 +109,7 @@
             this.freteTextBox.ReadOnly = true;
             this.freteTextBox.Size = new System.Drawing.Size(121, 20);
             this.freteTextBox.TabIndex = 7;
+
             // 
             // totalTextBox
             // 
@@ -144,6 +141,7 @@
             this.limparButton.TabIndex = 3;
             this.limparButton.Text = "&Limpar";
             this.limparButton.UseVisualStyleBackColor = true;
+            this.limparButton.Click += new System.EventHandler(this.limparButton_Click);
             // 
             // calcularButton
             // 
@@ -177,7 +175,6 @@
             this.Controls.Add(this.label1);
             this.Name = "FreteForm";
             this.Text = "Frete";
-
             this.ResumeLayout(false);
             this.PerformLayout();
 
