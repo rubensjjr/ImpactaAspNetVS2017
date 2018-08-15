@@ -24,8 +24,64 @@ namespace AspNetVS2017.Capitulo01.VetoresColecoes.Testes
             {
                 Console.WriteLine(@decimal);
             }
+            
 
             Console.WriteLine("Tamanho do Vetor" + decimais.Length);
         }
+
+        [TestMethod]
+        public void RedemensionamentoTeste()
+        {
+            var decimais = new decimal[] { 3.1m, 9.3m, 10 };
+
+            Array.Resize(ref decimais, 5);
+
+            decimais[4] = 1.8m;
+        }
+
+        [TestMethod]
+        public void OrdenacaoTeste()
+        {
+            var decimais = new decimal[] { 3.1m, 9.3m, 1.3m };
+
+            Array.Sort(decimais);
+            Assert.AreEqual(decimais[0], 1.3m);
+
+        }
+
+        [TestMethod]
+        public void ParamsTeste()
+
+        {
+            var decimais = new decimal[] { 3.1m, 9.3m, 1.3m };
+            Console.WriteLine(Media(decimais));
+
+            Console.WriteLine(Media(3,8.9m,0.87m,20));
+        }
+
+        [TestMethod]
+        public void TodaStringEhUmVetorTeste()
+        {
+            var nome = "Hejlsberg";
+
+            Assert.AreEqual(nome[0], 'H');
+
+            foreach(var @char in nome)
+            {
+                Console.WriteLine(@char);
+            }
+        }
+
+        private decimal Media(params decimal[] decimais)
+        {
+            decimal soma = 0;
+            foreach (var numero in decimais)
+            {
+                soma += numero;
+
+            }
+            return soma / decimais.Length;
+        }
+      }
     }
-}
+
