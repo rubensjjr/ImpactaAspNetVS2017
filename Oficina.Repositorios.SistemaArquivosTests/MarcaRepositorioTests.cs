@@ -9,41 +9,37 @@ using System.Threading.Tasks;
 namespace Oficina.Repositorios.SistemaArquivos.Tests
 {
     [TestClass()]
-    public class CorRepositorioTests
+    public class MarcaRepositorioTests
     {
-        private CorRepositorio _corRepositorio = new CorRepositorio();
+        private MarcaRepositorio _marcaRepositorio = new MarcaRepositorio();
+
 
         [TestMethod()]
         public void SelecionarTest()
         {
-                  
+            var marcas = _marcaRepositorio.Selecionar();
 
-            var cores = _corRepositorio.Selecionar();
-
-            foreach (var cor in cores)
+            foreach (var marca in marcas)
             {
-                Console.WriteLine($"{cor.ID}:{cor.Nome}");
+                Console.WriteLine($"{marca.ID}:{marca.Nome}");
             }
         }
-
         [TestMethod()]
         [DataRow(1)]
         [DataRow(-1)]
-
-
         public void SelecionarPorIdTeste(int id)
         {
-          var cor = _corRepositorio.Selecionar(id);
+            var marca = _marcaRepositorio.Selecionar(id);
 
             if (id > 0)
             {
-                Assert.IsTrue(cor.Nome == "Amarelo");
-              //  Assert.IsTrue(cor.Nome.Equals ( "Amarelo");
+                Assert.IsTrue(marca.Nome == "Fiat");
+                //  Assert.IsTrue(marca.Nome.Equals ( "Amarelo");
 
             }
             else
             {
-                Assert.IsNull(cor);
+                Assert.IsNull(marca);
             }
 
         }

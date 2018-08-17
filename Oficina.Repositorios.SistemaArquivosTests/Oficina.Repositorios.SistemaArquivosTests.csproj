@@ -57,16 +57,28 @@
   </Choose>
   <ItemGroup>
     <Compile Include="CorRepositorioTests.cs" />
+    <Compile Include="MarcaRepositorioTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Oficina.Dominio\Oficina.Dominio.csproj">
+      <Project>{7B3EECC7-D737-4A85-A410-1B4D2E5A22F3}</Project>
+      <Name>Oficina.Dominio</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Oficina.Repositorios.SistemaArquivos\Oficina.Repositorios.SistemaArquivos.csproj">
       <Project>{C6D31A2F-05DC-4A0D-AD36-7475B7428FB8}</Project>
       <Name>Oficina.Repositorios.SistemaArquivos</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Dados\Marca.txt" />
+    <Content Include="bin\Debug\Dados\Cor.txt" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
