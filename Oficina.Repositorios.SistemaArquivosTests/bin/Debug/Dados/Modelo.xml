@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<modelos>
+  <modelo>
+    <id>1</id>
+    <nome>Mobi</nome>
+    <marcaid>1</marcaid>
+  </modelo>
+  <modelo>
+    <id>2</id>
+    <nome>Focus</nome>
+    <marcaid>2</marcaid>
+  </modelo>
+  <modelo>
+    <id>3</id>
+    <nome>Fiesta</nome>
+    <marcaid>2</marcaid>
+  </modelo>
+  <modelo>
+    <id>4</id>
+    <nome>Onix</nome>
+    <marcaid>3</marcaid>
+  </modelo>
+  <modelo>
+    <id>4</id>
+    <nome>Corsa</nome>
+    <marcaid>3</marcaid>
+  </modelo>
+  <modelo>
+    <id>5</id>
+    <nome>Fit</nome>
+    <marcaid>4</marcaid>
+  </modelo>
+</modelos>

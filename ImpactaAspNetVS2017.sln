@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oficina.Repositorios.Sistem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oficina.Repositorios.SistemaArquivosTests", "Oficina.Repositorios.SistemaArquivosTests\Oficina.Repositorios.SistemaArquivosTests.csproj", "{F222C373-BF26-4BC6-9F62-489DAB71EC3C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oficina.WebPages", "Oficina.WebPages\Oficina.WebPages.csproj", "{A1BFD52F-5F18-4D41-8B80-81271D11ADF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{F222C373-BF26-4BC6-9F62-489DAB71EC3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F222C373-BF26-4BC6-9F62-489DAB71EC3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F222C373-BF26-4BC6-9F62-489DAB71EC3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1BFD52F-5F18-4D41-8B80-81271D11ADF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1BFD52F-5F18-4D41-8B80-81271D11ADF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1BFD52F-5F18-4D41-8B80-81271D11ADF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1BFD52F-5F18-4D41-8B80-81271D11ADF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +73,7 @@ Global
 		{7B3EECC7-D737-4A85-A410-1B4D2E5A22F3} = {2343EC20-A94D-4139-939C-D12E8302D116}
 		{C6D31A2F-05DC-4A0D-AD36-7475B7428FB8} = {2343EC20-A94D-4139-939C-D12E8302D116}
 		{F222C373-BF26-4BC6-9F62-489DAB71EC3C} = {2343EC20-A94D-4139-939C-D12E8302D116}
+		{A1BFD52F-5F18-4D41-8B80-81271D11ADF0} = {2343EC20-A94D-4139-939C-D12E8302D116}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DB5EA4FF-D170-499D-80F8-53EE74F5D089}
