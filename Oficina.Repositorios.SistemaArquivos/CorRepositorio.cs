@@ -8,7 +8,7 @@ namespace Oficina.Repositorios.SistemaArquivos
 {
     public class CorRepositorio
     {
-        private string _caminhoArquivo = ConfigurationManager.AppSettings["CaminhoArquivoCor"];
+        private string _caminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,ConfigurationManager.AppSettings["CaminhoArquivoCor"]);
 
         public List<Cor> Selecionar()
         {
@@ -17,7 +17,7 @@ namespace Oficina.Repositorios.SistemaArquivos
             foreach (var linha in File.ReadAllLines(_caminhoArquivo))
             {
                 var cor = new Cor();
-                cor.ID = Convert.ToInt32(linha.Substring(0, 5));
+                cor.Id = Convert.ToInt32(linha.Substring(0, 5));
                 cor.Nome = linha.Substring(5);
 
                 cores.Add(cor);
@@ -37,7 +37,7 @@ namespace Oficina.Repositorios.SistemaArquivos
                 if (linhaId == id)
                 {
                     cor = new Cor();
-                    cor.ID = Convert.ToInt32(linha.Substring(0, 5));
+                    cor.Id = Convert.ToInt32(linha.Substring(0, 5));
                     cor.Nome = linha.Substring(5);
 
                     break;

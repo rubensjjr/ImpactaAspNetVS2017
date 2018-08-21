@@ -2,7 +2,7 @@
 {
     public class Modelo
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Nome { get; set; }
         public Marca Marca { get; set; }
     }

@@ -24,7 +24,7 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
 
             foreach (var modelo in modelos)
             {
-                Console.WriteLine($"{modelo.ID}:{modelo.Nome}:{modelo.Marca}");
+                Console.WriteLine($"{modelo.Id}:{modelo.Nome}:{modelo.Marca}");
             }
         }
 

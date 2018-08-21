@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<veiculo>
+  <Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>7825cb88-2924-4311-b5a8-af8318c2db13</Id>
+    <Placa>ABC1234</Placa>
+    <Modelo>
+      <ID>3</ID>
+      <Nome>Fiesta</Nome>
+      <Marca>
+        <ID>2</ID>
+        <Nome>Ford</Nome>
+      </Marca>
+    </Modelo>
+    <Ano>2014</Ano>
+    <Cor>
+      <ID>2</ID>
+      <Nome>Preto</Nome>
+    </Cor>
+    <Combustivel>Flex</Combustivel>
+    <Cambio>Manual</Cambio>
+    <Observacao>Observação</Observacao>
+  </Veiculo>
+  <Veiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>04807c00-95bc-4332-8e76-ff2108bfadfd</Id>
+    <Placa>sdassa</Placa>
+    <Modelo>
+      <Id>2</Id>
+      <Nome>Focus</Nome>
+      <Marca>
+        <Id>2</Id>
+        <Nome>Ford</Nome>
+      </Marca>
+    </Modelo>
+    <Ano>1929</Ano>
+    <Cor>
+      <Id>2</Id>
+      <Nome>Preto</Nome>
+    </Cor>
+    <Combustivel>Flex</Combustivel>
+    <Cambio>Automatico</Cambio>
+  </Veiculo>
+</veiculo>

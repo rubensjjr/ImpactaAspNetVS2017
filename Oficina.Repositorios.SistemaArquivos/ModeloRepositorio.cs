@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace Oficina.Repositorios.SistemaArquivos
 {
     public class ModeloRepositorio
     {
-        private string _caminhoArquivo = ConfigurationManager.AppSettings["CaminhoArquivoModelo"];
+        private string _caminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ConfigurationManager.AppSettings["CaminhoArquivoModelo"]);
         private MarcaRepositorio _marcaRepositorio = new MarcaRepositorio();
 
         public List<Modelo> SelecionarPorMarca(int marcaId)
@@ -26,7 +27,7 @@ namespace Oficina.Repositorios.SistemaArquivos
                 {
                     var modelo = new Modelo();
 
-                    modelo.ID = Convert.ToInt32(elemento.Element("id").Value);
+                    modelo.Id = Convert.ToInt32(elemento.Element("id").Value);
                     modelo.Nome = elemento.Element("nome").Value;
                     modelo.Marca = _marcaRepositorio.Selecionar(marcaId);
 
@@ -51,7 +52,7 @@ namespace Oficina.Repositorios.SistemaArquivos
                 {
                     modelo = new Modelo();
 
-                    modelo.ID = Convert.ToInt32(elemento.Element("id").Value);
+                    modelo.Id = Convert.ToInt32(elemento.Element("id").Value);
                     modelo.Nome = elemento.Element("nome").Value;
                     modelo.Marca = _marcaRepositorio.Selecionar(Convert.ToInt32(elemento.Element("marcaid").Value));
 

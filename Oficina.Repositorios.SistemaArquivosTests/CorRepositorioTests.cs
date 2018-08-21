@@ -22,7 +22,7 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
 
             foreach (var cor in cores)
             {
-                Console.WriteLine($"{cor.ID}:{cor.Nome}");
+                Console.WriteLine($"{cor.Id}:{cor.Nome}");
             }
         }
 

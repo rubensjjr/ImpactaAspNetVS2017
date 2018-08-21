@@ -88,6 +88,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Dados\Cor.txt" />
+    <Content Include="Dados\Marca.txt" />
+    <Content Include="Dados\Modelo.xml" />
+    <Content Include="Dados\Veiculo.xml" />
     <Content Include="Veiculo.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -101,6 +105,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VeiculoAplicação.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Oficina.Dominio\Oficina.Dominio.csproj">
+      <Project>{7b3eecc7-d737-4a85-a410-1b4d2e5a22f3}</Project>
+      <Name>Oficina.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Oficina.Repositorios.SistemaArquivos\Oficina.Repositorios.SistemaArquivos.csproj">
+      <Project>{c6d31a2f-05dc-4a0d-ad36-7475b7428fb8}</Project>
+      <Name>Oficina.Repositorios.SistemaArquivos</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

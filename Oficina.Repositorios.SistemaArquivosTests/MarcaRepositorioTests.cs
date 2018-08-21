@@ -21,7 +21,7 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
 
             foreach (var marca in marcas)
             {
-                Console.WriteLine($"{marca.ID}:{marca.Nome}");
+                Console.WriteLine($"{marca.Id}:{marca.Nome}");
             }
         }
         [TestMethod()]

@@ -11,7 +11,7 @@ namespace Oficina.Repositorios.SistemaArquivos
 {
     public class MarcaRepositorio
     {
-        private string _caminhoArquivo = ConfigurationManager.AppSettings["CaminhoArquivoMarca"];
+        private string _caminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ConfigurationManager.AppSettings["CaminhoArquivoMarca"]);
 
         public List<Marca> Selecionar()
         {
@@ -22,7 +22,7 @@ namespace Oficina.Repositorios.SistemaArquivos
                 var propriedades = linha.Split('|');
 
                 var marca = new Marca();
-                marca.ID = Convert.ToInt32(propriedades[0]);
+                marca.Id = Convert.ToInt32(propriedades[0]);
                 marca.Nome = propriedades[1];
 
                 marcas.Add(marca);
@@ -43,7 +43,7 @@ namespace Oficina.Repositorios.SistemaArquivos
                 if (linhaId == id)
                 {
                     marca = new Marca();
-                    marca.ID = linhaId;
+                    marca.Id = linhaId;
                     marca.Nome = propriedades[1];
 
                     break;
