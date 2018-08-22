@@ -28,7 +28,7 @@ namespace Oficina.WebPages
         public List <Cor> Cores { get; set; }
         public List <Combustivel> Combustiveis { get; set; }
         public List<Cambio> Cambios { get; set; }
-
+ 
 
 
         private void PopularControles()
@@ -49,7 +49,7 @@ namespace Oficina.WebPages
 
         public void Inserir()
         {
-            var veiculo = new Veiculo();
+            var veiculo = new VeiculoPasseio();
             var formulario = HttpContext.Current.Request.Form;
 
 
@@ -58,7 +58,7 @@ namespace Oficina.WebPages
             veiculo.Combustivel = (Combustivel)Convert.ToInt32(formulario["Combustivel"]);
             veiculo.Cor = corRepositorio.Selecionar(Convert.ToInt32(formulario["Cor"]));
             veiculo.Modelo = _modeloRepositorio.Selecionar(Convert.ToInt32(formulario["Modelo"]));
-            veiculo.Placa = formulario["Placa"];
+            veiculo.Placa = formulario["Placa"];//.ToUpper().Replace("-",string.Empty);
 
             veiculoRepositorio.inserir(veiculo);
 
