@@ -27,14 +27,32 @@
                 width: 300px;
             }
 
+        #mensagemErro {
+            height: 40px;
+            background-color: #dc3545;
+            margin-bottom: 10px;
+            color: white;
+            text-align: center;
+            vertical-align:middle;
+            line-height: 40px;
+        }
+
     </style>
 </head>
-<body>
+<body onload="exibirMensagem()">
     @{ 
         if (IsPost)
         {
-            _veiculoAplicacao.Inserir();
-            Response.Redirect("Veiculo");
+            try
+            {
+                _veiculoAplicacao.Inserir();
+                Response.Redirect("Veiculo?mensagem=Veículo Cadastrado com sucesso!");
+            }
+            catch 
+            {
+
+               <div id="mensagemErro">@HttpContext.Current.Items["MensagemErro"]</div>
+            }
         }
 
     }
@@ -112,6 +130,16 @@
         function obterModelos(marcaId) {
             document.location.href = "Veiculo?marcaId=" + marcaId;
         }
+        function exibirMensagem() {
+            const params = (new URL(document.location)).searchParams;
+            const mensagem = params.get("mensagem");
+
+            if (mensagem) {
+                alert(mensagem);
+                document.location.href = "Veiculo";
+            }
+        }
+
     </script>
 </body>
 </html>

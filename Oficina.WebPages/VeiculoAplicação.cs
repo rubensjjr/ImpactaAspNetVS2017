@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using Oficina.Dominio;
 using Oficina.Repositorios.SistemaArquivos;
+using System.IO;
 
 namespace Oficina.WebPages
 {
@@ -49,18 +50,47 @@ namespace Oficina.WebPages
 
         public void Inserir()
         {
-            var veiculo = new VeiculoPasseio();
-            var formulario = HttpContext.Current.Request.Form;
+            try
+            {
+                var veiculo = new VeiculoPasseio();
+                var formulario = HttpContext.Current.Request.Form;
 
 
-            veiculo.Ano = Convert.ToInt32(formulario["Ano"]);
-            veiculo.Cambio = (Cambio)Convert.ToInt32(formulario["Cambio"]);
-            veiculo.Combustivel = (Combustivel)Convert.ToInt32(formulario["Combustivel"]);
-            veiculo.Cor = corRepositorio.Selecionar(Convert.ToInt32(formulario["Cor"]));
-            veiculo.Modelo = _modeloRepositorio.Selecionar(Convert.ToInt32(formulario["Modelo"]));
-            veiculo.Placa = formulario["Placa"];//.ToUpper().Replace("-",string.Empty);
+                veiculo.Ano = Convert.ToInt32(formulario["Ano"]);
+                veiculo.Cambio = (Cambio)Convert.ToInt32(formulario["Cambio"]);
+                veiculo.Combustivel = (Combustivel)Convert.ToInt32(formulario["Combustivel"]);
+                veiculo.Cor = corRepositorio.Selecionar(Convert.ToInt32(formulario["Cor"]));
+                veiculo.Modelo = _modeloRepositorio.Selecionar(Convert.ToInt32(formulario["Modelo"]));
+                veiculo.Observacao = formulario["placa"];
+                veiculo.Placa = formulario["Placa"];//.ToUpper().Replace("-",string.Empty);
+                veiculo.TipoCarroceria = TipoCarroceria.Hatch;
 
-            veiculoRepositorio.inserir(veiculo);
+                veiculoRepositorio.inserir(veiculo);
+            } 
+            catch (FileNotFoundException ex)
+            {
+                HttpContext.Current.Items.Add("MensagemErro", $"O Arquivo {ex.FileName}não foi encontrado.");
+                throw;
+            }
+            catch (DirectoryNotFoundException)
+            {
+                HttpContext.Current.Items.Add("MensagemErro","O Diretório não foi encontrado.");
+                throw;
+            }
+            catch (UnauthorizedAccessException)
+            {
+                HttpContext.Current.Items.Add("MensagemErro", "Acesso ao arquivo negado.");
+                throw;
+            }
+
+            catch (Exception excecao)
+            {
+                HttpContext.Current.Items.Add("MensagemErro","Ooops! Sua Operação não foi realizada.");
+
+                //Logar o objeto de excecao
+
+                throw;
+            }
 
         }
 

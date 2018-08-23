@@ -39,4 +39,25 @@
     <Combustivel>Flex</Combustivel>
     <Cambio>Automatico</Cambio>
   </Veiculo>
+  <VeiculoPasseio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>8b0e588d-209e-425e-8f29-467eafbe4bcf</Id>
+    <Placa>SDA7884</Placa>
+    <Modelo>
+      <Id>1</Id>
+      <Nome>Mobi</Nome>
+      <Marca>
+        <Id>1</Id>
+        <Nome>Fiat</Nome>
+      </Marca>
+    </Modelo>
+    <Ano>1929</Ano>
+    <Cor>
+      <Id>2</Id>
+      <Nome>Preto</Nome>
+    </Cor>
+    <Combustivel>Alcool</Combustivel>
+    <Cambio>Manual</Cambio>
+    <Observacao>sda-7884</Observacao>
+    <TipoCarroceria>Hatch</TipoCarroceria>
+  </VeiculoPasseio>
 </veiculo>
