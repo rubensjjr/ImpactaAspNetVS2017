@@ -7,23 +7,23 @@ using System.Threading.Tasks;
 
 namespace Oficina.Dominio
 {
-    //todo: OO- Herança.
-    public class VeiculoPasseio: Veiculo
+    //todo: OO - herança.
+    public class VeiculoPasseio : Veiculo
     {
-        public TipoCarroceria TipoCarroceria { get; set; }
+        public TipoCarroceria Carroceria { get; set; }
 
         //todo: OO - polimorfismo por substituição (override).
-
         public override List<string> Validar()
         {
             var erros = base.ValidarBase();
-
+            //var ano = Ano;
             //Trace.WriteLine(erros);
 
-            if (!Enum.IsDefined(typeof(TipoCarroceria), TipoCarroceria))
+            if (!Enum.IsDefined(typeof(TipoCarroceria), Carroceria))
             {
-                erros.Add($"A Carroceria Informada ({TipoCarroceria})não é Valida");
+                erros.Add($"A Carroceria informada ({Carroceria}) não é válida.");
             }
+
             return erros;
         }
     }

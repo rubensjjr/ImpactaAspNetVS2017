@@ -11,20 +11,18 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
     [TestClass()]
     public class ModeloRepositorioTests
     {
-
         [TestMethod()]
         [DataRow(1)]
         [DataRow(2)]
         [DataRow(3)]
         [DataRow(4)]
-
-        public void SelecionarPorMarcaTest(int marcaid)
+        public void SelecionarPorMarcaTest(int marcaId)
         {
-            var modelos = new ModeloRepositorio().SelecionarPorMarca(marcaid);
+            var modelos = new ModeloRepositorio().SelecionarPorMarca(marcaId);
 
             foreach (var modelo in modelos)
             {
-                Console.WriteLine($"{modelo.Id}:{modelo.Nome}:{modelo.Marca}");
+                Console.WriteLine($"{modelo.Id}: {modelo.Nome} - {modelo.Marca.Nome}");
             }
         }
 
@@ -35,14 +33,13 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
         {
             var modelo = new ModeloRepositorio().Selecionar(id);
 
-            if (id >0)
+            if (id > 0)
             {
                 Assert.AreEqual(modelo.Nome, "Mobi");
             }
             else
             {
                 Assert.IsNull(modelo);
-
             }
         }
     }

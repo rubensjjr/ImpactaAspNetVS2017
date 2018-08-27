@@ -12,7 +12,9 @@ namespace Oficina.Repositorios.SistemaArquivos
 {
     public class ModeloRepositorio
     {
-        private string _caminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ConfigurationManager.AppSettings["CaminhoArquivoModelo"]);
+        private string _caminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+            ConfigurationManager.AppSettings["CaminhoArquivoModelo"]);
+
         private MarcaRepositorio _marcaRepositorio = new MarcaRepositorio();
 
         public List<Modelo> SelecionarPorMarca(int marcaId)
@@ -20,10 +22,9 @@ namespace Oficina.Repositorios.SistemaArquivos
             var arquivoXml = XDocument.Load(_caminhoArquivo);
             var modelos = new List<Modelo>();
             
-            foreach (var elemento in arquivoXml.Descendants("modelo")) 
+            foreach (var elemento in arquivoXml.Descendants("modelo"))
             {
-                
-                if (marcaId.ToString() == elemento.Element("marcaid").Value) 
+                if (marcaId.ToString() == elemento.Element("marcaId").Value)
                 {
                     var modelo = new Modelo();
 
@@ -31,9 +32,7 @@ namespace Oficina.Repositorios.SistemaArquivos
                     modelo.Nome = elemento.Element("nome").Value;
                     modelo.Marca = _marcaRepositorio.Selecionar(marcaId);
 
-
                     modelos.Add(modelo);
-                    
                 }
             }
 
@@ -44,9 +43,8 @@ namespace Oficina.Repositorios.SistemaArquivos
         {
             Modelo modelo = null;
             var arquivoXml = XDocument.Load(_caminhoArquivo);
-            
 
-            foreach (var  elemento in arquivoXml.Descendants("modelo"))
+            foreach (var elemento in arquivoXml.Descendants("modelo"))
             {
                 if (id.ToString() == elemento.Element("id").Value)
                 {
@@ -54,11 +52,13 @@ namespace Oficina.Repositorios.SistemaArquivos
 
                     modelo.Id = Convert.ToInt32(elemento.Element("id").Value);
                     modelo.Nome = elemento.Element("nome").Value;
-                    modelo.Marca = _marcaRepositorio.Selecionar(Convert.ToInt32(elemento.Element("marcaid").Value));
+                    modelo.Marca = 
+                        _marcaRepositorio.Selecionar(Convert.ToInt32(elemento.Element("marcaId").Value));
 
                     break;
                 }
             }
+
             return modelo;
         }
     }

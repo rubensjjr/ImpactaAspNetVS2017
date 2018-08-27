@@ -13,21 +13,19 @@ namespace Oficina.Repositorios.SistemaArquivos
 {
     public class VeiculoRepositorio
     {
-        private string _caminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ConfigurationManager.AppSettings["CaminhoArquivoVeiculo"]);
+        private string _caminhoArquivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+            ConfigurationManager.AppSettings["CaminhoArquivoVeiculo"]);
 
-        public void inserir<T>(T veiculo) where T:  Veiculo
+        public void Inserir<T>(T veiculo) //where T: Veiculo
         {
             var arquivoXml = XDocument.Load(_caminhoArquivo);
 
             var registro = new StringWriter();
-
             new XmlSerializer(typeof(T)).Serialize(registro, veiculo);
 
             arquivoXml.Root.Add(XElement.Parse(registro.ToString()));
 
-
             arquivoXml.Save(_caminhoArquivo);
         }
-
     }
 }

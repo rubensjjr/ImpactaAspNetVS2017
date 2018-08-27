@@ -5,6 +5,6 @@
         Sedan = 1,
         Hatch = 2,
         Picape = 3,
-        Suv =4
+        Suv = 4
     }
 }

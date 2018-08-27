@@ -11,8 +11,7 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
     [TestClass()]
     public class MarcaRepositorioTests
     {
-        private MarcaRepositorio _marcaRepositorio = new MarcaRepositorio();
-
+        MarcaRepositorio _marcaRepositorio = new MarcaRepositorio();
 
         [TestMethod()]
         public void SelecionarTest()
@@ -21,9 +20,10 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
 
             foreach (var marca in marcas)
             {
-                Console.WriteLine($"{marca.Id}:{marca.Nome}");
+                Console.WriteLine($"{marca.Id}: {marca.Nome}");
             }
         }
+
         [TestMethod()]
         [DataRow(1)]
         [DataRow(-1)]
@@ -34,14 +34,13 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
             if (id > 0)
             {
                 Assert.IsTrue(marca.Nome == "Fiat");
-                //  Assert.IsTrue(marca.Nome.Equals ( "Amarelo");
-
+                //Assert.IsTrue(cor.Nome.Equals("Amarelo"));
             }
             else
             {
                 Assert.IsNull(marca);
             }
-
         }
+
     }
 }

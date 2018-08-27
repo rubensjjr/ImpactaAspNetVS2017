@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E3C6DA5B-5031-44AD-8BC9-3FA3A09BF363}</ProjectGuid>
+    <ProjectGuid>{3226AB35-B4BF-4CF5-8FF6-C14A627170EB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AspNetVS2017.Capitulo01.VetoresColecoes.Testes</RootNamespace>

@@ -16,36 +16,30 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
         [TestMethod()]
         public void SelecionarTest()
         {
-                  
-
             var cores = _corRepositorio.Selecionar();
 
             foreach (var cor in cores)
             {
-                Console.WriteLine($"{cor.Id}:{cor.Nome}");
+                Console.WriteLine($"{cor.Id}: {cor.Nome}");
             }
         }
 
         [TestMethod()]
         [DataRow(1)]
         [DataRow(-1)]
-
-
         public void SelecionarPorIdTeste(int id)
         {
-          var cor = _corRepositorio.Selecionar(id);
+            var cor = _corRepositorio.Selecionar(id);
 
             if (id > 0)
             {
                 Assert.IsTrue(cor.Nome == "Amarelo");
-              //  Assert.IsTrue(cor.Nome.Equals ( "Amarelo");
-
+                //Assert.IsTrue(cor.Nome.Equals("Amarelo"));
             }
             else
             {
                 Assert.IsNull(cor);
             }
-
         }
     }
 }

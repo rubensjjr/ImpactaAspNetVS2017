@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F222C373-BF26-4BC6-9F62-489DAB71EC3C}</ProjectGuid>
+    <ProjectGuid>{F2FD549D-BD75-496C-970C-71FC0BD49A72}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Oficina.Repositorios.SistemaArquivosTests</RootNamespace>
@@ -70,17 +70,17 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Oficina.Dominio\Oficina.Dominio.csproj">
-      <Project>{7B3EECC7-D737-4A85-A410-1B4D2E5A22F3}</Project>
+      <Project>{2824e366-05b3-4fcd-86b2-4105df78b278}</Project>
       <Name>Oficina.Dominio</Name>
     </ProjectReference>
     <ProjectReference Include="..\Oficina.Repositorios.SistemaArquivos\Oficina.Repositorios.SistemaArquivos.csproj">
-      <Project>{C6D31A2F-05DC-4A0D-AD36-7475B7428FB8}</Project>
+      <Project>{C67BE6DA-63E3-4FD9-8484-AF60DBEE3547}</Project>
       <Name>Oficina.Repositorios.SistemaArquivos</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\Dados\Marca.txt" />
     <Content Include="bin\Debug\Dados\Cor.txt" />
+    <Content Include="bin\Debug\Dados\Marca.txt" />
     <Content Include="bin\Debug\Dados\Modelo.xml" />
     <Content Include="bin\Debug\Dados\Veiculo.xml" />
   </ItemGroup>

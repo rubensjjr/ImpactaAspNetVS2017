@@ -4,7 +4,7 @@
     {
         Manual = 1,
         Automatico = 2,
-        SemiAutomatizado = 3,
+        SemiAutomatico = 3,
         Automatizado = 4
     }
 }

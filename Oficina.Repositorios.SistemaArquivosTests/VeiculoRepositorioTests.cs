@@ -13,7 +13,7 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
     public class VeiculoRepositorioTests
     {
         [TestMethod()]
-        public void inserirTest()
+        public void InserirTest()
         {
             var veiculo = new VeiculoPasseio();
 
@@ -24,10 +24,9 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
             veiculo.Modelo = new ModeloRepositorio().Selecionar(3);
             veiculo.Observacao = "Observação";
             veiculo.Placa = "ABC1234";
-            veiculo.TipoCarroceria = TipoCarroceria.Hatch;
+            veiculo.Carroceria = TipoCarroceria.Hatch;
 
-
-            new VeiculoRepositorio().inserir(veiculo);
+            new VeiculoRepositorio().Inserir("Rafa");
         }
     }
 }

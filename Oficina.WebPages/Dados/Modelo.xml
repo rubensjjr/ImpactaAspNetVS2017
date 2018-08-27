@@ -3,31 +3,26 @@
   <modelo>
     <id>1</id>
     <nome>Mobi</nome>
-    <marcaid>1</marcaid>
+    <marcaId>1</marcaId>
   </modelo>
   <modelo>
     <id>2</id>
     <nome>Focus</nome>
-    <marcaid>2</marcaid>
+    <marcaId>2</marcaId>
   </modelo>
   <modelo>
     <id>3</id>
     <nome>Fiesta</nome>
-    <marcaid>2</marcaid>
+    <marcaId>2</marcaId>
   </modelo>
   <modelo>
     <id>4</id>
     <nome>Onix</nome>
-    <marcaid>3</marcaid>
-  </modelo>
-  <modelo>
-    <id>4</id>
-    <nome>Corsa</nome>
-    <marcaid>3</marcaid>
+    <marcaId>3</marcaId>
   </modelo>
   <modelo>
     <id>5</id>
     <nome>Fit</nome>
-    <marcaid>4</marcaid>
+    <marcaId>4</marcaId>
   </modelo>
 </modelos>

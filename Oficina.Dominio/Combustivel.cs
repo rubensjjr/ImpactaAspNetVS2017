@@ -1,12 +1,11 @@
 ﻿namespace Oficina.Dominio
 {
-    public enum Combustivel
+    public enum Combustivel //: int
     {
-        Gasolina =1,
-        Alcool =2,
+        Gasolina = 1,
+        Alcool = 2,
         Flex = 3,
         Diesel = 4,
-        GNV = 5
-
+        Gnv = 5
     }
 }

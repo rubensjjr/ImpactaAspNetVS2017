@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C6D31A2F-05DC-4A0D-AD36-7475B7428FB8}</ProjectGuid>
+    <ProjectGuid>{C67BE6DA-63E3-4FD9-8484-AF60DBEE3547}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Oficina.Repositorios.SistemaArquivos</RootNamespace>
@@ -41,8 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MarcaRepositorio.cs" />
     <Compile Include="CorRepositorio.cs" />
+    <Compile Include="MarcaRepositorio.cs" />
     <Compile Include="ModeloRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VeiculoRepositorio.cs" />
@@ -52,7 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Oficina.Dominio\Oficina.Dominio.csproj">
-      <Project>{7B3EECC7-D737-4A85-A410-1B4D2E5A22F3}</Project>
+      <Project>{2824E366-05B3-4FCD-86B2-4105DF78B278}</Project>
       <Name>Oficina.Dominio</Name>
     </ProjectReference>
   </ItemGroup>

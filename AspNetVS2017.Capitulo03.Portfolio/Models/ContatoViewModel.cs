@@ -3,16 +3,16 @@
 namespace AspNetVS2017.Capitulo03.Portfolio.Models
 {
     public class ContatoViewModel
-    {   
-        [Required] // faz a validação dos campos em java
+    {
+        [Required(ErrorMessage ="O campo Tal é mais do que obrigatório!")]
         public string Nome { get; set; }
 
         [Required]
-        [EmailAddress] // valida o email na tela
+        [EmailAddress]
+        //[IdadeMinima]
         public string Email { get; set; }
 
         [Required]
-        public string Mensagem { get; set;}
-
+        public string Mensagem { get; set; }
     }
 }

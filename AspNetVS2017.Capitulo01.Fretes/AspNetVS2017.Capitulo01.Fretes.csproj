@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DB0C324E-96D6-4170-AAAB-72869D8BC1C7}</ProjectGuid>
+    <ProjectGuid>{788B74B4-0F45-4400-8374-8A9265948ED5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>AspNetVS2017.Capitulo01.Fretes</RootNamespace>
     <AssemblyName>AspNetVS2017.Capitulo01.Fretes</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>

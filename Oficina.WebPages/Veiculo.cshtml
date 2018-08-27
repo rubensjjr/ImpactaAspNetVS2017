@@ -7,22 +7,24 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Cadastro de Veículos</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
     <style type="text/css">
         body {
             font-size: 16px;
-            font-family:"Roboto",sans-serif;
+            font-family: "Roboto", sans-serif;
         }
 
         label {
-            min-width:100px;
-            display:inline-block;
+            min-width: 100px;
+            display: inline-block;
         }
+
         input, select {
             min-width: 200px;
             min-height: 24px;
             margin-bottom: 5px;
         }
+
             input[type=submit] {
                 width: 300px;
             }
@@ -33,28 +35,25 @@
             margin-bottom: 10px;
             color: white;
             text-align: center;
-            vertical-align:middle;
+            vertical-align: middle;
             line-height: 40px;
         }
-
     </style>
 </head>
 <body onload="exibirMensagem()">
-    @{ 
+    @{
         if (IsPost)
         {
             try
             {
                 _veiculoAplicacao.Inserir();
-                Response.Redirect("Veiculo?mensagem=Veículo Cadastrado com sucesso!");
+                Response.Redirect("Veiculo?mensagem=Veículo cadastrado com sucesso!");
             }
-            catch 
+            catch
             {
-
-               <div id="mensagemErro">@HttpContext.Current.Items["MensagemErro"]</div>
+                <div id="mensagemErro">@HttpContext.Current.Items["MensagemErro"]</div>
             }
         }
-
     }
     <h1>Cadastro de Veículos</h1>
     <hr />
@@ -130,17 +129,16 @@
         function obterModelos(marcaId) {
             document.location.href = "Veiculo?marcaId=" + marcaId;
         }
+
         function exibirMensagem() {
             const params = (new URL(document.location)).searchParams;
             const mensagem = params.get("mensagem");
 
-            if (mensagem) {
+            if (mensagem) { //undefined | null
                 alert(mensagem);
                 document.location.href = "Veiculo";
             }
         }
-
     </script>
 </body>
 </html>
-

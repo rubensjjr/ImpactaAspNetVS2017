@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5FB8141A-B246-4A98-8D2A-92C2F5AE7B5E}</ProjectGuid>
+    <ProjectGuid>{105ED123-9773-4AFE-AF56-60221B153999}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -143,15 +143,29 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ContatoViewModel.cs" />
+    <Compile Include="Models\PortfolioViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Imagens\Portfolio\img1.jpg" />
+    <Content Include="Content\Imagens\Portfolio\img10.jpg" />
+    <Content Include="Content\Imagens\Portfolio\img11.jpg" />
+    <Content Include="Content\Imagens\Portfolio\img12.jpg" />
+    <Content Include="Content\Imagens\Portfolio\img2.jpg" />
+    <Content Include="Content\Imagens\Portfolio\img3.jpg" />
+    <Content Include="Content\Imagens\Portfolio\img4.jpg" />
+    <Content Include="Content\Imagens\Portfolio\img5.jpg" />
+    <Content Include="Content\Imagens\Portfolio\img6.jpg" />
+    <Content Include="Content\Imagens\Portfolio\img7.jpg" />
+    <Content Include="Content\Imagens\Portfolio\img8.jpg" />
+    <Content Include="Content\Imagens\Portfolio\img9.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -186,6 +200,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Portfolio\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -219,9 +234,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50007</DevelopmentServerPort>
+          <DevelopmentServerPort>49934</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50007/</IISUrl>
+          <IISUrl>http://localhost:49934/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
